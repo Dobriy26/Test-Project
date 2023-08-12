@@ -4,22 +4,22 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField]
-    private Text scoreText; 
-    private int score;
+    private Text pointsText; 
+    private int points;
     private void Start()
     {
-        score = 0; 
-        UpdateScoreText(); 
+        points = 0;
+        UpdatePointsText(); 
     }
 
     public void EnemyKilled()
     {
         score += 1;
-        UpdateScoreText(); 
+        UpdatePointsText(); 
     }
 
-    private void UpdateScoreText()
+    private void UpdatePointsText()
     {
-        scoreText.text = "Score: " + score; 
+        pointsText.text = "Score: " + score; 
     }
 }
