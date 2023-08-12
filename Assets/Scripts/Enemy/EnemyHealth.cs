@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log("Enemy died!");
         Destroy(this.gameObject, 0f);
-        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+        PointsScript scoreManager = FindObjectOfType<PointsScript>();
         scoreManager.EnemyKilled();
     }
 }

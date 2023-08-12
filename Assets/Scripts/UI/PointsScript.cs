@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PointsScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Text pointsText;
+    private int points;
+    private void Start()
     {
-        
+        points = 0;
+        UpdatePointsText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnemyKilled()
     {
-        
+        points += 1;
+        UpdatePointsText();
+    }
+
+    private void UpdatePointsText()
+    {
+        pointsText.text = "Score: " + points;
     }
 }
